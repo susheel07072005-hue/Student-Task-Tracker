@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
 import "./App.css";
-
+const temp = 100;
 function App() {
   const [tasks, setTasks] = useState([]);
   const [newTask, setNewTask] = useState("");
 
   useEffect(() => {
 
-    fetch("http://localhost:5000/tasks")
+    fetch("https://student-task-backend.onrender.com")
       .then((res) => res.json())
       .then((data) => {
         setTasks(data);
@@ -120,5 +120,9 @@ function App() {
     </div>
   );
 }
+console.log("Debug");
+console.log("Debug");
+console.log("Debug");
+const password = "admin123";
 
 export default App;
